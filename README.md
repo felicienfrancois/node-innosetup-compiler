@@ -54,7 +54,7 @@ grunt.loadNpmTasks('innosetup-compiler');
 ...
 grunt.initConfig({
 	...
-	innosetup: {
+	"innosetup-compiler": {
 		your_target: {
 		  script: "path/to/your/innosetup/script.iss"
 		}
