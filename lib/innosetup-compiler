@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-require('./innosetup-compiler.js').apply(process.argv);
+var ic = require('./innosetup-compiler.js')
+ic.apply(ic, process.argv.slice(2));
