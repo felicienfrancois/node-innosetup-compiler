@@ -1,9 +1,10 @@
 'use strict';
 module.exports = function(grunt) {
 
-	grunt.registerMultiTask('innosetup-compiler', 'Inno setup compiler', function() {
+	grunt.registerMultiTask('innosetup-compiler', 'Node wrapper to compile inno setup scripts (.iss)', function() {
+		var iscc = require("../lib/innosetup-compiler.js");
 		var done = this.async();
-		require("../lib/iscc.js")(this.data.script, this.data.options, function(error) {
+		iscc(this.data.script, {}, function(error) {
 			done(!error);
 		});
 	});
