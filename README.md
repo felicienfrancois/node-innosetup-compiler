@@ -7,8 +7,19 @@ This is a simple node wrapper of [Inno Setup](http://www.jrsoftware.org/isinfo.p
 
 ### OS Support
 
+##### Windows
+
 Works natively on windows
-Works also on Linux and Mac OS X if [wine](www.winehq.org) is installed
+
+##### Linux & Mac OS X
+
+Works if [wine](www.winehq.org) is installed
+
+### Install
+
+```bash
+npm install innosetup-compiler
+```
 
 ### Usage
 
@@ -17,3 +28,7 @@ require("innosetup-compiler")("path/to/your/innoscript.iss", function(error) {
 	// callback
 });
 ```
+
+### Credits
+
+Thanks to Jordan Russell and Martijn Laan for their amazing work on Inno Setup
