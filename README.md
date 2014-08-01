@@ -20,36 +20,32 @@ Works if [wine](www.winehq.org) is installed
 ##### Command line
 
 ```shell
-# Install
 npm install -g innosetup-compiler
-# Use
+```
+
+```shell
 innosetup-compiler myscript.iscc
 ```
 
-
-### Node JS
+##### Node JS
 
 ```shell
-# Install
 npm install innosetup-compiler
 ```
 
 ```javascript
-// Use
 require("innosetup-compiler")("path/to/your/innoscript.iss", {}, function(error) {
 	// callback
 });
 ```
 
-### Grunt
+##### Grunt
 
 ```shell
-# Install
 npm install innosetup-compiler --save-dev
 ```
 
 ```javascript
-// Use
 grunt.loadNpmTasks('innosetup-compiler');
 ...
 grunt.initConfig({
@@ -61,8 +57,6 @@ grunt.initConfig({
 	}
 	...
 });
-...
-
 ```
 
 
