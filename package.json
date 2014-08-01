@@ -4,7 +4,7 @@
   "description": "Node wrapper to compile inno setup scripts (.iss)",
   "main": "lib/innosetup-compiler.js",
   "bin": {
-    "innosetup-compiler": "node ./bin/innosetup-compiler"
+    "innosetup-compiler": "./lib/innosetup-compiler"
   },
   "repository": {
     "type": "git",
