@@ -1,8 +1,11 @@
 {
-  "name": "node-innosetup-compiler",
+  "name": "innosetup-compiler",
   "version": "5.5.5",
   "description": "Node wrapper to compile inno setup scripts (.iss)",
-  "main": "lib/innosetup.js",
+  "main": "lib/innosetup-compiler.js",
+  "bin": {
+    "innosetup-compiler": "node ./bin/innosetup-compiler"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/felicienfrancois/node-innosetup-compiler.git"
