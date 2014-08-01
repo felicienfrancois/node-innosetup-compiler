@@ -6,12 +6,37 @@
   "bin": {
     "innosetup-compiler": "./lib/innosetup-compiler"
   },
+  "homepage": "https://github.com/felicienfrancois/node-innosetup-compiler",
   "repository": {
     "type": "git",
     "url": "https://github.com/felicienfrancois/node-innosetup-compiler.git"
   },
+  "author": {
+    "name": "Felicien Francois",
+    "email": "felicien@tweakstyle.com",
+    "url": "http://tweakstyle.com"
+  },
   "bugs": {
     "url": "https://github.com/felicienfrancois/node-innosetup-compiler/issues"
   },
-  "readmeFilename": "README.md"
+  "licenses": [
+    {
+      "type": "Open Source",
+      "url": "https://github.com/felicienfrancois/node-innosetup-compiler/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "readmeFilename": "README.md",
+  "keywords": [
+    "inno",
+    "innosetup",
+    "setup",
+    "windows",
+    "installer",
+    "gruntplugin",
+    "node",
+    "cli"
+  ]
 }
