@@ -15,15 +15,27 @@ Works natively on windows
 
 Works if [wine](www.winehq.org) is installed
 
-### Install
+### Usage
+
+##### Command line
 
 ```bash
+# Install
+npm install -g innosetup-compiler
+# Use
+innosetup-compiler myscript.iscc
+```
+
+
+### Node JS
+
+```bash
+# Install
 npm install innosetup-compiler
 ```
 
-### Usage
-
 ```javascript
+// Use
 require("innosetup-compiler")("path/to/your/innoscript.iss", function(error) {
 	// callback
 });

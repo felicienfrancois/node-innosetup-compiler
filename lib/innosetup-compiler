@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('./innosetup-compiler.js');
+require('./innosetup-compiler.js').apply(process.argv);
