@@ -72,6 +72,7 @@ Print full log output
 #### options.gui
 _Default_: `false`
 Use Compil32.exe instead or ISCC.exe (GUI mode)
+verbose option has no effect when gui mode is enabled
 
 
 ### Credits
