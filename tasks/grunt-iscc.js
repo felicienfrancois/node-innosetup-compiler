@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 		var iscc = require("../lib/iscc.js");
 		var done = this.async();
 		iscc(this.data.script, this.options({
-			gui: false
+			gui: false,
+			verbose: false
 		}), function(error) {
 			done(!error);
 		});

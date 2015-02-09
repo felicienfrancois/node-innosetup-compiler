@@ -24,8 +24,7 @@ npm install -g innosetup-compiler
 ```
 
 ```shell
-innosetup-compiler myscript.iscc
-innosetup-compiler myscript.iscc --gui // with gui enabled
+innosetup-compiler myscript.iss --gui --verbose
 ```
 
 ##### Node JS
@@ -35,7 +34,7 @@ npm install innosetup-compiler
 ```
 
 ```javascript
-require("innosetup-compiler")("path/to/your/innoscript.iss", {gui: false}, function(error) {
+require("innosetup-compiler")("path/to/your/innoscript.iss", {gui: false, verbose: false}, function(error) {
 	// callback
 });
 ```
@@ -54,7 +53,8 @@ grunt.initConfig({
 	"innosetup_compiler": {
 		your_target: {
 		  options: {
-		    gui: false
+		    gui: false,
+		    verbose: false
 		  },
 		  script: "path/to/your/innosetup/script.iss"
 		}
@@ -64,6 +64,10 @@ grunt.initConfig({
 ```
 
 ### Options
+
+#### options.verbose
+_Default_: `false`
+Print full log output
 
 #### options.gui
 _Default_: `false`
