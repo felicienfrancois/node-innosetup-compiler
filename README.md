@@ -15,6 +15,13 @@ Works natively on windows
 
 Works if [wine](www.winehq.org) is installed
 
+_Note for Mac OS X Users_:
+If you get the following error `err:macdrv:process_attach Failed to start Cocoa app main loop`,
+you main need to update wine to a more recent version (devel)
+```
+brew install wine --devel
+```
+
 ### Usage
 
 ##### Command line
