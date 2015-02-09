@@ -13,7 +13,8 @@ module.exports = function(grunt) {
     innosetup_compiler: {
       default_options: {
         options: {
-        	gui: false
+        	gui: false,
+        	verbose: false
         },
         scriptPath: null
       }
