@@ -66,12 +66,15 @@ grunt.initConfig({
 ### Options
 
 #### options.verbose
-_Default_: `false`
+Default: `false`
+
 Print full log output
 
 #### options.gui
-_Default_: `false`
+Default: `false`
+
 Use Compil32.exe instead or ISCC.exe (GUI mode)
+
 verbose option has no effect when gui mode is enabled
 
 
