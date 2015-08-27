@@ -24,6 +24,8 @@ brew install wine --devel
 
 ### Usage
 
+_All options are optional_
+
 ##### Command line
 
 ```shell
@@ -31,7 +33,7 @@ npm install -g innosetup-compiler
 ```
 
 ```shell
-innosetup-compiler myscript.iss --gui --verbose
+innosetup-compiler myscript.iss --gui --verbose --signtoolname=signtool --signtoolcommand='"path\to\signtool.exe" sign /f "path\to\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
 ```
 
 ##### Node JS
@@ -41,8 +43,13 @@ npm install innosetup-compiler
 ```
 
 ```javascript
-require("innosetup-compiler")("path/to/your/innoscript.iss", {gui: false, verbose: false}, function(error) {
-	// callback
+require("innosetup-compiler")("path/to/your/innoscript.iss", {
+    gui: false,
+    verbose: false,
+    signtoolname: 'signtool',
+    signtoolcommand: '"path\to\signtool.exe" sign /f "path\to\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
+}, function(error) {
+    // callback
 });
 ```
 
@@ -56,17 +63,19 @@ npm install innosetup-compiler --save-dev
 grunt.loadNpmTasks('innosetup-compiler');
 ...
 grunt.initConfig({
-	...
-	"innosetup_compiler": {
-		your_target: {
-		  options: {
-		    gui: false,
-		    verbose: false
-		  },
-		  script: "path/to/your/innosetup/script.iss"
-		}
-	}
-	...
+    ...
+    "innosetup_compiler": {
+        your_target: {
+          options: {
+            gui: false,
+            verbose: false,
+            signtoolname: 'signtool',
+            signtoolcommand: '"path\to\signtool.exe" sign /f "path\to\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
+          },
+          script: "path/to/your/innosetup/script.iss"
+        }
+    }
+    ...
 });
 ```
 
@@ -82,7 +91,13 @@ Default: `false`
 
 Use Compil32.exe instead or ISCC.exe (GUI mode)
 
-verbose option has no effect when gui mode is enabled
+all other options are ignored in this case
+
+#### options.signtoolname and options.signtoolcommand
+Default: null
+
+The name and command used to sign installer and uninstaller
+See [Innosetup Signtool documentation](http://www.jrsoftware.org/ishelp/index.php?topic=setup_signtool)
 
 
 ### Credits
