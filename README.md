@@ -33,7 +33,7 @@ npm install -g innosetup-compiler
 ```
 
 ```shell
-innosetup-compiler myscript.iss --gui --verbose --signtoolname=signtool --signtoolcommand='"path\to\signtool.exe" sign /f "path\to\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
+innosetup-compiler myscript.iss --gui --verbose --signtoolname=signtool --signtoolcommand='"path/to/signtool.exe" sign /f "C:\\absolute\\path\\to\\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
 ```
 
 ##### Node JS
@@ -47,7 +47,7 @@ require("innosetup-compiler")("path/to/your/innoscript.iss", {
     gui: false,
     verbose: false,
     signtoolname: 'signtool',
-    signtoolcommand: '"path\to\signtool.exe" sign /f "path\to\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
+    signtoolcommand: '"path/to/signtool.exe" sign /f "C:\\absolute\\path\\to\\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
 }, function(error) {
     // callback
 });
@@ -70,7 +70,7 @@ grunt.initConfig({
             gui: false,
             verbose: false,
             signtoolname: 'signtool',
-            signtoolcommand: '"path\to\signtool.exe" sign /f "path\to\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
+            signtoolcommand: '"path/to/signtool.exe" sign /f "C:\\absolute\\path\\to\\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
           },
           script: "path/to/your/innosetup/script.iss"
         }
