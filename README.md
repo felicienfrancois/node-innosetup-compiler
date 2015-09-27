@@ -99,11 +99,10 @@ Default: null
 The name and command used to sign installer and uninstaller
 See [Innosetup Signtool documentation](http://www.jrsoftware.org/ishelp/index.php?topic=setup_signtool)
 
-#### Additional ISCC Options
+#### Other ISCC Options
 Default: none
 
 All ISCC.exe options can be used (without the trailing slash).
-More info in official innosetup documentation: [Command Line Compiler Execution](http://www.jrsoftware.org/ishelp/index.php?topic=compilercmdline)
 
 - Command line using the `--[Arg]=[Val1];[Val2]` syntax
 ```shell
@@ -137,6 +136,7 @@ grunt.initConfig({
 });
 ```
 
+More info in official innosetup documentation: [Command Line Compiler Execution](http://www.jrsoftware.org/ishelp/index.php?topic=compilercmdline)
 
 ### Credits
 
