@@ -99,6 +99,44 @@ Default: null
 The name and command used to sign installer and uninstaller
 See [Innosetup Signtool documentation](http://www.jrsoftware.org/ishelp/index.php?topic=setup_signtool)
 
+#### Additional ISCC Options
+Default: none
+
+All ISCC.exe options can be used (without the trailing slash).
+More info in official innosetup documentation: [Command Line Compiler Execution](http://www.jrsoftware.org/ishelp/index.php?topic=compilercmdline)
+
+- Command line using the `--[Arg]=[Val1];[Val2]` syntax
+```shell
+innosetup-compiler myscript.iss --O=outputfile.exe
+```
+
+- Node JS
+```javascript
+require("innosetup-compiler")("path/to/your/innoscript.iss", {
+    O: 'outputfile.exe'
+}, function(error) {
+    // callback
+});
+```
+
+- Grunt
+```javascript
+grunt.loadNpmTasks('innosetup-compiler');
+...
+grunt.initConfig({
+    ...
+    "innosetup_compiler": {
+        your_target: {
+          options: {
+            O: 'outputfile.exe'
+          },
+          script: "path/to/your/innosetup/script.iss"
+        }
+    }
+    ...
+});
+```
+
 
 ### Credits
 
