@@ -1,6 +1,6 @@
-; *** Inno Setup version 5.5.3+ Polish messages ***
+; *** Inno Setup version 6.0.0+ Polish messages ***
 ; Krzysztof Cynarski <krzysztof at cynarski.net>
-; Proofreading and corrections:
+; Proofreading, corrections and 6.0.0+ updates:
 ; £ukasz Abramczuk <lukasz.abramczuk at gmail.com>
 ; To download user-contributed translations of this file, go to:
 ; http://www.jrsoftware.org/is3rdparty.php
@@ -9,11 +9,11 @@
 ; messages that didn't have them already, because on those messages Inno
 ; Setup adds the periods automatically (appending a period would result in
 ; two periods being displayed).
-;
-; $jrsoftware: issrc/Files/Languages/Polish.isl,v 1.16 2007/03/09 16:56:52 jr Exp $
-; last update: 2016/01/14 
+; last update: 2019/02/25 
 
 [LangOptions]
+; The following three entries are very important. Be sure to read and 
+; understand the '[LangOptions] section' topic in the help file.
 LanguageName=Polski
 LanguageID=$0415
 LanguageCodePage=1250
@@ -36,6 +36,7 @@ ErrorTitle=B³¹d
 SetupLdrStartupMessage=Ten program zainstaluje aplikacjê %1. Czy chcesz kontynuowaæ?
 LdrCannotCreateTemp=Nie mo¿na utworzyæ pliku tymczasowego. Instalacja przerwana
 LdrCannotExecTemp=Nie mo¿na uruchomiæ pliku z folderu tymczasowego. Instalacja przerwana
+HelpTextNote=
 
 ; *** Startup error messages
 LastErrorMessage=%1.%n%nB³¹d %2: %3
@@ -49,7 +50,6 @@ WindowsServicePackRequired=Ta aplikacja wymaga systemu %1 z dodatkiem Service Pa
 NotOnThisPlatform=Tej aplikacji nie mo¿na uruchomiæ w systemie %1.
 OnlyOnThisPlatform=Ta aplikacja wymaga systemu %1.
 OnlyOnTheseArchitectures=Ta aplikacja mo¿e byæ uruchomiona tylko w systemie Windows zaprojektowanym dla procesorów o architekturze:%n%n%1
-MissingWOW64APIs=Ta wersja systemu Windows nie zawiera komponentów niezbêdnych do przeprowadzenia 64-bitowej instalacji. Aby rozwi¹zaæ ten problem, proszê zainstalowaæ Service Pack %1.
 WinVersionTooLowError=Ta aplikacja wymaga systemu %1 w wersji %2 lub nowszej.
 WinVersionTooHighError=Ta aplikacja nie mo¿e byæ zainstalowana w systemie %1 w wersji %2 lub nowszej.
 AdminPrivilegesRequired=Aby przeprowadziæ instalacjê tej aplikacji, konto u¿ytkownika systemu musi posiadaæ uprawnienia administratora.
@@ -57,13 +57,23 @@ PowerUserPrivilegesRequired=Aby przeprowadziæ instalacjê tej aplikacji, konto u¿
 SetupAppRunningError=Instalator wykry³, i¿ aplikacja %1 jest aktualnie uruchomiona.%n%nPrzed wciœniêciem przycisku OK zamknij wszystkie procesy aplikacji. Kliknij przycisk Anuluj, aby przerwaæ instalacjê.
 UninstallAppRunningError=Dezinstalator wykry³, i¿ aplikacja %1 jest aktualnie uruchomiona.%n%nPrzed wciœniêciem przycisku OK zamknij wszystkie procesy aplikacji. Kliknij przycisk Anuluj, aby przerwaæ dezinstalacjê.
 
+; *** Startup questions	 ---
+PrivilegesRequiredOverrideTitle=Wybierz typ instalacji aplikacji
+PrivilegesRequiredOverrideInstruction=Wybierz typ instalacji
+PrivilegesRequiredOverrideText1=Aplikacja %1 mo¿e zostaæ zainstalowana dla wszystkich u¿ytkowników (wymagane s¹ uprawnienia administratora) lub tylko dla bie¿¹cego u¿ytkownika.
+PrivilegesRequiredOverrideText2=Aplikacja %1 mo¿e zostaæ zainstalowana dla bie¿¹cego u¿ytkownika lub wszystkich u¿ytkowników (wymagane s¹ uprawnienia administratora).
+PrivilegesRequiredOverrideAllUsers=Zainstaluj dla &wszystkich u¿ytkowników
+PrivilegesRequiredOverrideAllUsersRecommended=Zainstaluj dla &wszystkich u¿ytkowników (zalecane)
+PrivilegesRequiredOverrideCurrentUser=Zainstaluj dla &bie¿¹cego u¿ytkownika
+PrivilegesRequiredOverrideCurrentUserRecommended=Zainstaluj dla &bie¿¹cego u¿ytkownika (zalecane)
+
 ; *** Misc. errors
 ErrorCreatingDir=Instalator nie móg³ utworzyæ katalogu "%1"
 ErrorTooManyFilesInDir=Nie mo¿na utworzyæ pliku w katalogu %1, poniewa¿ zawiera on zbyt wiele plików
 
 ; *** Setup common messages
 ExitSetupTitle=Zakoñcz instalacjê
-ExitSetupMessage=Instalacja nie zosta³a zakoñczona. Je¿eli przerwiesz j¹ teraz, aplikacja nie zostanie zainstalowana. Mo¿na ponowiæ instalacjê póŸniej poprzez uruchamianie instalatora.%n%nCzy chcesz przerwaæ instalacjê ?
+ExitSetupMessage=Instalacja nie zosta³a zakoñczona. Je¿eli przerwiesz j¹ teraz, aplikacja nie zostanie zainstalowana. Mo¿na ponowiæ instalacjê póŸniej poprzez uruchamianie instalatora.%n%nCzy chcesz przerwaæ instalacjê?
 AboutSetupMenuItem=&O instalatorze...
 AboutSetupTitle=O instalatorze
 AboutSetupMessage=%1 wersja %2%n%3%n%n Strona domowa %1:%n%4
@@ -110,7 +120,7 @@ IncorrectPassword=Wprowadzone has³o jest nieprawid³owe. Spróbuj ponownie.
 ; *** "License Agreement" wizard page
 WizardLicense=Umowa Licencyjna
 LicenseLabel=Przed kontynuacj¹ nale¿y zapoznaæ siê z poni¿sz¹ wa¿n¹ informacj¹.
-LicenseLabel3=Proszê przeczytaæ tekst Umowy Licencyjnej. Przed kontynuacj¹ instalacji nale¿y zaakceptowaæ powy¿sze warunki.
+LicenseLabel3=Proszê przeczytaæ tekst Umowy Licencyjnej. Przed kontynuacj¹ instalacji nale¿y zaakceptowaæ warunki umowy.
 LicenseAccepted=&Akceptujê warunki umowy
 LicenseNotAccepted=&Nie akceptujê warunków umowy
 
@@ -133,7 +143,7 @@ UserInfoNameRequired=Nazwa u¿ytkownika jest wymagana.
 ; *** "Select Destination Location" wizard page
 WizardSelectDir=Lokalizacja docelowa
 SelectDirDesc=Gdzie ma zostaæ zainstalowana aplikacja [name]?
-SelectDirLabel3=Instalator zainstaluje aplikacjê [name] do poni¿szego folderu.
+SelectDirLabel3=Instalator zainstaluje aplikacjê [name] do wskazanego poni¿ej folderu.
 SelectDirBrowseLabel=Kliknij przycisk Dalej, aby kontynuowaæ. Jeœli chcesz wskazaæ inny folder, kliknij przycisk Przegl¹daj.
 DiskSpaceMBLabel=Wymagane jest przynajmniej [mb] MB wolnego miejsca na dysku.
 CannotInstallToNetworkDrive=Instalator nie mo¿e zainstalowaæ aplikacji na dysku sieciowym.
@@ -172,7 +182,7 @@ SelectTasksLabel2=Zaznacz dodatkowe zadania, które instalator ma wykonaæ podczas
 ; *** "Select Start Menu Folder" wizard page
 WizardSelectProgramGroup=Folder Menu Start
 SelectStartMenuFolderDesc=Gdzie maj¹ zostaæ umieszczone skróty do aplikacji?
-SelectStartMenuFolderLabel3=Instalator utworzy skróty do aplikacji w poni¿szym folderze Menu Start.
+SelectStartMenuFolderLabel3=Instalator utworzy skróty do aplikacji we wskazanym poni¿ej folderze Menu Start.
 SelectStartMenuFolderBrowseLabel=Kliknij przycisk Dalej, aby kontynuowaæ. Jeœli chcesz wskazaæ inny folder, kliknij przycisk Przegl¹daj.
 MustEnterGroupName=Musisz wprowadziæ nazwê folderu.
 GroupNameTooLong=Nazwa folderu lub œcie¿ki jest za d³uga.
@@ -231,7 +241,10 @@ SelectDirectoryLabel=Proszê okreœliæ lokalizacjê kolejnego archiwum instalatora.
   
 ; *** Installation phase messages
 SetupAborted=Instalacja nie zosta³a zakoñczona.%n%nProszê rozwi¹zaæ problem i ponownie rozpocz¹æ instalacjê.
-EntryAbortRetryIgnore=Mo¿esz ponowiæ nieudan¹ czynnoœæ, zignorowaæ j¹ (niezalecane) lub przerwaæ instalacjê.
+AbortRetryIgnoreSelectAction=Wybierz operacjê
+AbortRetryIgnoreRetry=Spróbuj &ponownie
+AbortRetryIgnoreIgnore=Z&ignoruj b³¹d i kontynuuj
+AbortRetryIgnoreCancel=Przerwij instalacjê
   
 ; *** Installation status messages
 StatusClosingApplications=Zamykanie aplikacji...
@@ -262,11 +275,13 @@ ErrorRegWriteKey=B³¹d podczas zapisu do klucza rejestru:%n%1\%2
 ErrorIniEntry=B³¹d podczas tworzenia pozycji w pliku INI: "%1".
  
 ; *** File copying errors
-FileAbortRetryIgnore=Mo¿esz ponowiæ nieudan¹ czynnoœæ, zignorowaæ j¹ i omin¹æ ten plik (niezalecane) lub przerwaæ instalacjê.
-FileAbortRetryIgnore2=Mo¿esz ponowiæ nieudan¹ czynnoœæ, zignorowaæ j¹ (niezalecane) lub przerwaæ instalacjê.
+FileAbortRetryIgnoreSkipNotRecommended=&Pomiñ plik (niezalecane)
+FileAbortRetryIgnoreIgnoreNotRecommended=Z&ignoruj b³¹d i kontynuuj (niezalecane)
 SourceIsCorrupted=Plik Ÿród³owy jest uszkodzony
 SourceDoesntExist=Plik Ÿród³owy "%1" nie istnieje
-ExistingFileReadOnly=Istniej¹cy plik jest oznaczony jako "Tylko do odczytu".%n%nMo¿esz ponowiæ (aby usun¹æ oznaczenie), zignorowaæ (aby omin¹æ ten plik) lub przerwaæ instalacjê.
+ExistingFileReadOnly2=Istniej¹cy plik nie mo¿e zostaæ zast¹piony, gdy¿ jest oznaczony jako "Tylko do odczytu".
+ExistingFileReadOnlyRetry=&Usuñ atrybut "Tylko do odczytu" i spróbuj ponownie
+ExistingFileReadOnlyKeepExisting=&Zachowaj istniej¹cy plik
 ErrorReadingExistingDest=Wyst¹pi³ b³¹d podczas próby odczytu istniej¹cego pliku:
 FileExists=Plik ju¿ istnieje.%n%nCzy chcesz, aby instalator nadpisa³ go w³asn¹ wersj¹?
 ExistingFileNewer=Istniej¹cy plik jest nowszy ni¿ ten, który instalator próbuje skopiowaæ. Zalecanym jest zachowanie istniej¹cego pliku.%n%nCzy chcesz zachowaæ istniej¹cy plik?
@@ -281,6 +296,16 @@ ErrorRegisterServer=Nie mo¿na zarejestrowaæ DLL/OCX: %1
 ErrorRegSvr32Failed=Funkcja RegSvr32 zakoñczy³a siê z kodem b³êdu %1
 ErrorRegisterTypeLib=Nie mogê zarejestrowaæ biblioteki typów: %1
 
+; *** Uninstall display name markings
+; used for example as 'My Program (32-bit)'
+UninstallDisplayNameMark=%1 (%2)
+; used for example as 'My Program (32-bit, All users)'
+UninstallDisplayNameMarks=%1 (%2, %3)
+UninstallDisplayNameMark32Bit=wersja 32-bitowa
+UninstallDisplayNameMark64Bit=wersja 64-bitowa
+UninstallDisplayNameMarkAllUsers=wszyscy u¿ytkownicy
+UninstallDisplayNameMarkCurrentUser=bie¿¹cy u¿ytkownik
+
 ; *** Post-installation errors
 ErrorOpeningReadme=Wyst¹pi³ b³¹d podczas próby otwarcia pliku z informacjami dodatkowymi.
 ErrorRestartingComputer=Instalator nie móg³ ponownie uruchomiæ tego komputera. Proszê wykonaæ tê czynnoœæ samodzielnie.
@@ -288,7 +313,7 @@ ErrorRestartingComputer=Instalator nie móg³ ponownie uruchomiæ tego komputera. P
 ; *** Uninstaller messages
 UninstallNotFound=Plik "%1" nie istnieje. Nie mo¿na przeprowadziæ dezinstalacji.
 UninstallOpenError=Plik "%1" nie móg³ zostaæ otwarty. Nie mo¿na przeprowadziæ dezinstalacji.
-UninstallUnsupportedVer=Ta wersja programu dezinstalacyjnego nie rozpoznaje formatu logu dezinstalacji w pliku "%1%". Nie mo¿na przeprowadziæ dezinstalacji.
+UninstallUnsupportedVer=Ta wersja programu dezinstalacyjnego nie rozpoznaje formatu logu dezinstalacji w pliku "%1". Nie mo¿na przeprowadziæ dezinstalacji.
 UninstallUnknownEntry=W logu dezinstalacji wyst¹pi³a nieznana pozycja (%1)
 ConfirmUninstall=Czy na pewno chcesz usun¹æ aplikacjê %1 i wszystkie jej sk³adniki?
 UninstallOnlyOnWin64=Ta aplikacja mo¿e byæ odinstalowana tylko w 64-bitowej wersji systemu Windows.
