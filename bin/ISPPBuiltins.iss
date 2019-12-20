@@ -1,15 +1,12 @@
 ; BEGIN ISPPBUILTINS.ISS
 //
-// Inno Setup Preprocessor 5
+// Inno Setup Preprocessor
 //
 // Copyright (C) 2001-2004 Alex Yackimoff. All Rights Reserved.
 // Portions by Martijn Laan.
-// http://ispp.sourceforge.net
 //
-// Inno Setup (C) 1997-2009 Jordan Russell. All Rights Reserved.
+// Inno Setup (C) 1997-2019 Jordan Russell. All Rights Reserved.
 // Portions by Martijn Laan.
-//
-// $Id: ISPPBuiltins.iss,v 1.3 2010/12/29 15:20:26 mlaan Exp $
 //
 #if defined(ISPP_INVOKED) && !defined(_BUILTINS_ISS_)
 //
@@ -43,15 +40,21 @@
 // 6 - conditional inclusion acknowledgements
 // 7 - reserved
 // 8 - show strings emitted with #emit directive
-// 9 - macro and functions successfull call acknowledgements
+// 9 - macro and functions successful call acknowledgements
 //10 - Local macro array allocation acknowledgements
 //
 //#pragma verboselevel 0
 //
 #ifndef __POPT_P__
 # define private CStrings
-# pragma parseroption -p+
+#else
+# pragma parseroption -p-
 #endif
+//
+#define NewLine            "\n"
+#define Tab                "\t"
+//
+#pragma parseroption -p+
 //
 #pragma spansymbol "\"
 //
@@ -161,10 +164,11 @@
 // GetStringFileInfo helpers
 //
 #define GetFileCompany(str FileName) GetStringFileInfo(FileName, COMPANY_NAME)
-#define GetFileCopyright(str FileName) GetStringFileInfo(FileName, LEGAL_COPYRIGHT)
 #define GetFileDescription(str FileName) GetStringFileInfo(FileName, FILE_DESCRIPTION)
-#define GetFileProductVersion(str FileName) GetStringFileInfo(FileName, PRODUCT_VERSION)
 #define GetFileVersionString(str FileName) GetStringFileInfo(FileName, FILE_VERSION)
+#define GetFileCopyright(str FileName) GetStringFileInfo(FileName, LEGAL_COPYRIGHT)
+#define GetFileOriginalFilename(str FileName) GetStringFileInfo(FileName, ORIGINAL_FILENAME)
+#define GetFileProductVersion(str FileName) GetStringFileInfo(FileName, PRODUCT_VERSION)
 //
 // ParseVersion
 //
@@ -356,6 +360,20 @@
 //
 #define Max(int A, int B, int C = MinInt)  \
   A > B ? A > C ? Int(A) : Int(C) : Int(B)
+//
+// SameText
+//
+// Returns True if the given strings are identical, ignoring case.
+// 
+#define SameText(str S1, str S2) \
+  LowerCase(S1) == LowerCase(S2)
+// 
+// SameStr
+//
+// Returns True if the given strings are identical, with case-sensitivity.
+//
+#define SameStr(str S1, str S2) \
+  S1 == S2
 //
 
 #ifdef CStrings

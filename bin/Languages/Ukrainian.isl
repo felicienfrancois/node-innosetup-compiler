@@ -1,16 +1,16 @@
-; *** Inno Setup version 5.5.3+ Ukrainian messages ***
-; Author: Dmitry Onischuk
+; *** Inno Setup version 6.0.3+ Ukrainian messages ***
+; Author: Dmytro Onyshchuk
 ; E-Mail: mr.lols@yandex.ua
 ; Web: http://counter-strike.com.ua/
 ; Please report all spelling/grammar errors, and observations.
-; Version 2012.12.14
+; Version 2019.10.04
 
-; *** Український переклад Inno Setup для версії 5.5.3 та вище***
+; *** Український переклад Inno Setup для версії 6.0.3 та вище***
 ; Автор перекладу: Дмитро Онищук
 ; E-Mail: mr.lols@yandex.ua
 ; Сайт: http://counter-strike.com.ua/
 ; Будь ласка, повідомляйте про всі знайдені помилки та зауваження.
-; Версія перекладу 2012.12.14
+; Версія перекладу 2019.10.04
 
 [LangOptions]
 ; The following three entries are very important. Be sure to read and 
@@ -46,6 +46,7 @@ ErrorTitle=Помилка
 SetupLdrStartupMessage=Ця програма встановить %1 на ваш комп'ютер, бажаєте продовжити?
 LdrCannotCreateTemp=Неможливо створити тимчасовий файл. Встановлення перервано
 LdrCannotExecTemp=Неможливо виконати файл в тимчасовій папці. Встановлення перервано
+HelpTextNote=
 
 ; *** Startup error messages
 LastErrorMessage=%1.%n%nПомилка %2: %3
@@ -59,13 +60,22 @@ WindowsServicePackRequired=Ця програма вимагає %1 Service Pack %2 або більш пізн
 NotOnThisPlatform=Ця програма не буде працювати під %1.
 OnlyOnThisPlatform=Ця програма повинна бути відкрита під %1.
 OnlyOnTheseArchitectures=Ця програма може бути встановлена лише на комп'ютерах під управлінням Windows для наступних архітектур процесорів:%n%n%1
-MissingWOW64APIs=В вашій версії Windows відсутні функції для виконання 64-бітного встановлення. Щоб усунути цю проблему встановіть пакет оновлень Service Pack %1.
 WinVersionTooLowError=Ця програма вимагає %1 версії %2 або більш пізню версію.
 WinVersionTooHighError=Ця програма не може бути встановлена на %1 версії %2 або більш пізню версію.
 AdminPrivilegesRequired=Щоб встановити цю програму ви повинні увійти до системи як адміністратор.
 PowerUserPrivilegesRequired=Щоб встановити цю програму ви повинні увійти до системи як адміністратор або як член групи «Досвідчені користувачі».
 SetupAppRunningError=Виявлено, що %1 вже відкрита.%n%nБудь ласка, закрийте всі копії програми та натисніть «OK» для продовження, або «Скасувати» для виходу.
 UninstallAppRunningError=Виявлено, що %1 вже відкрита.%n%nБудь ласка, закрийте всі копії програми та натисніть «OK» для продовження, або «Скасувати» для виходу.
+
+; *** Startup questions
+PrivilegesRequiredOverrideTitle=Вибір режиму встановлення
+PrivilegesRequiredOverrideInstruction=Виберіть режим встановлення
+PrivilegesRequiredOverrideText1=%1 може бути встановлено для всіх користувачів (потребує права адміністратора), або тільки для вас.
+PrivilegesRequiredOverrideText2=%1 може бути встановлено тільки для вас, або для всіх користувачів (потребує права адміністратора).
+PrivilegesRequiredOverrideAllUsers=Встановити для &всіх користувачів
+PrivilegesRequiredOverrideAllUsersRecommended=Встановити для &всіх користувачів (рекомендується)
+PrivilegesRequiredOverrideCurrentUser=Встановити тільки для мене
+PrivilegesRequiredOverrideCurrentUserRecommended=Встановити тільки для &мене (рекомендується)
 
 ; *** Різні помилки
 ErrorCreatingDir=Програмі встановлення не вдалося створити папку "%1"
@@ -97,7 +107,7 @@ ButtonNewFolder=&Створити папку
 
 ; *** Діалогове повідомлення "Вибір мови"
 SelectLanguageTitle=Виберіть мову встановлення
-SelectLanguageLabel=Виберіть мову, яка буде використовуватися під час встановлення:
+SelectLanguageLabel=Виберіть мову, яка буде використовуватися під час встановлення.
 
 ; *** Спільний тест програми
 ClickNext=Натисніть «Далі», щоб продовжити, або «Скасувати» для виходу з програми встановлення.
@@ -145,6 +155,7 @@ WizardSelectDir=Вибір шляху встановлення
 SelectDirDesc=Куди ви бажаєте встановити [name]?
 SelectDirLabel3=Програма встановить [name] у наступну папку.
 SelectDirBrowseLabel=Натисніть «Далі», щоб продовжити. Якщо ви бажаєте вибрати іншу папку, натисніть «Огляд».
+DiskSpaceGBLabel=Необхідно як мінімум [gb] Гб вільного дискового простору.
 DiskSpaceMBLabel=Необхідно як мінімум [mb] Mб вільного дискового простору.
 CannotInstallToNetworkDrive=Встановлення не може проводитися на мережевий диск.
 CannotInstallToUNCPath=Встановлення не може проводитися по мережевому шляху.
@@ -172,6 +183,7 @@ NoUninstallWarningTitle=Компоненти існують
 NoUninstallWarning=Виявлено, що наступні компоненти вже встановленні на вашому комп’ютері:%n%n%1%n%nВідміна вибору цих компонентів не видалить їх.%n%nВи бажаєте продовжити?
 ComponentSize1=%1 Kб
 ComponentSize2=%1 Mб
+ComponentsDiskSpaceGBLabel=Даний вибір вимагає як мінімум [gb] Гб дискового простору.
 ComponentsDiskSpaceMBLabel=Даний вибір вимагає як мінімум [mb] Mб дискового простору.
 
 ; *** Сторінка "Вибір додаткових завдань"
@@ -212,6 +224,7 @@ ApplicationsFound2=Наступні програми використовують файли, які повинні бути онов
 CloseApplications=&Автоматично закрити програми
 DontCloseApplications=&Не закривати програми
 ErrorCloseApplications=Програма встановлення не може автоматично закрити всі програми. Рекомендується закрити всі програми, що використовують файли, які повинні бути оновлені програмою встановлення, перш ніж продовжити.
+PrepareToInstallNeedsRestart=Програмі встановлення необхідно перезавантажити ваш ПК. Після перезавантаження ПК, запустіть встановлення знову для завершення встановлення [name]%n%nВи бажаєте перезавантажити зараз?
 
 ; *** Сторінка "Встановлення"
 WizardInstalling=Встановлення
@@ -241,7 +254,10 @@ SelectDirectoryLabel=Будь ласка, вкажіть шлях до наступного диску.
 
 ; *** Installation phase messages
 SetupAborted=Встановлення не завершено.%n%nБудь ласка, усуньте проблему і відкрийте програму встановлення знову.
-EntryAbortRetryIgnore=Натисніть «Повторити спробу» щоб спробувати ще раз, «Пропустити» щоб пропустити, або «Скасувати» для скасування встановлення.
+AbortRetryIgnoreSelectAction=Виберіть дію
+AbortRetryIgnoreRetry=&Спробувати знову
+AbortRetryIgnoreIgnore=&Ігнорувати помилку та продовжити
+AbortRetryIgnoreCancel=Відмінити встановлення
 
 ; *** Повідомлення стану встановлення
 StatusClosingApplications=Закриття програм...
@@ -272,11 +288,13 @@ ErrorRegWriteKey=Помилка запису в ключ реєстру:%n%1\%2
 ErrorIniEntry=Помилка при створенні запису в INI-файлі "%1".
 
 ; *** Помилки копіювання файлів
-FileAbortRetryIgnore=Натисніть «Повторити спробу» щоб спробувати ще раз, «Пропустити» щоб пропустити файл (не рекомендується) або «Скасувати» для скасування встановлення.
-FileAbortRetryIgnore2=Натисніть «Повторити спробу» щоб спробувати ще раз, «Пропустити» щоб ігнорувати помилку (не рекомендується) або «Скасувати» для скасування встановлення.
+FileAbortRetryIgnoreSkipNotRecommended=&Пропустити файл (не рекомендується)
+FileAbortRetryIgnoreIgnoreNotRecommended=&Ігнорувати помилку та продовжити (не рекомендується)
 SourceIsCorrupted=Вихідний файл пошкоджений
 SourceDoesntExist=Вихідний файл "%1" не існує
-ExistingFileReadOnly=Існуючий файл помічений як «Лише читання».%n%nНатисніть «Повторити спробу» щоб видалити атрибут «Лише читання», «Пропустити» щоб пропустити файл або «Скасувати» для скасування встановлення.
+ExistingFileReadOnly2=Неможливо замінити існуючий файл, оскільки він позначений лише для читання.
+ExistingFileReadOnlyRetry=&Видалити атрибут "лише читання" та спробувати знову
+ExistingFileReadOnlyKeepExisting=&Залишити існуючий файл
 ErrorReadingExistingDest=Виникла помилка при спробі читання існуючого файлу:
 FileExists=Файл вже існує.%n%nПерезаписати його?
 ExistingFileNewer=Існуючий файл новіший, чим встановлюваний. Рекомендується зберегти існуючий файл.%n%nВи бажаєте зберегти існуючий файл?
@@ -290,6 +308,14 @@ ErrorRenamingTemp=Виникла помилка при спробі перейменування файлу в папці встано
 ErrorRegisterServer=Неможливо зареєструвати DLL/OCX: %1
 ErrorRegSvr32Failed=Помилка при виконанні RegSvr32, код повернення %1
 ErrorRegisterTypeLib=Неможливо зареєструвати бібліотеку типів: %1
+
+; *** Uninstall display name markings
+UninstallDisplayNameMark=%1 (%2)
+UninstallDisplayNameMarks=%1 (%2, %3)
+UninstallDisplayNameMark32Bit=32-біт
+UninstallDisplayNameMark64Bit=64-біт
+UninstallDisplayNameMarkAllUsers=Всі користувачі
+UninstallDisplayNameMarkCurrentUser=Поточний користувач
 
 ; *** Post-installation errors
 ErrorOpeningReadme=Виникла помилка при спробі відкриття файлу README.
@@ -311,7 +337,7 @@ UninstallDataCorrupted=Файл "%1" пошкоджений. Видалення неможливе
 
 ; *** Uninstallation phase messages
 ConfirmDeleteSharedFileTitle=Видалити загальні файли?
-ConfirmDeleteSharedFile2=Система свідчить, що наступний спільний файл більше не використовується іншими програмами. Ви бажаєте видалити цей спільний файл?%n%nЯкщо які-небудь програми все ще використовують цей файл і він видалиться, то ці програми можуть функціонувати неправильно. Якщо ви не впевнені, виберіть «Ні». Залишений файл не нашкодить вашій системі.
+ConfirmDeleteSharedFile2=Система свідчить, що наступний спільний файл більше не використовується іншими програмами. Ви бажаєте видалити цей спільний файл?%n%nЯкщо інші програми все ще використовують цей файл і він видалиться, то ці програми можуть функціонувати неправильно. Якщо ви не впевнені, виберіть «Ні». Залишений файл не нашкодить вашій системі.
 SharedFileNameLabel=Ім'я файлу:
 SharedFileLocationLabel=Розміщення:
 WizardUninstalling=Стан видалення
@@ -336,5 +362,5 @@ LaunchProgram=Відкрити %1
 AssocFileExtension=&Асоціювати %1 з розширенням файлу %2
 AssocingFileExtension=Асоціювання %1 з розширенням файлу %2...
 AutoStartProgramGroupDescription=Автозавантаження:
-AutoStartProgram=Автоматично завантужувати %1
+AutoStartProgram=Автоматично завантажувати %1
 AddonHostProgramNotFound=%1 не знайдений у вказаній вами папці%n%nВи все одно бажаєте продовжити?
