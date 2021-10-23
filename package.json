@@ -1,6 +1,6 @@
 {
   "name": "innosetup-compiler",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "Node wrapper to compile inno setup scripts (.iss)",
   "main": "lib/iscc.js",
   "bin": {
