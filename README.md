@@ -53,6 +53,30 @@ require("innosetup-compiler")("path/to/your/innoscript.iss", {
 });
 ```
 
+Or using promise
+```javascript
+require("innosetup-compiler")("path/to/your/innoscript.iss", {
+    gui: false,
+    verbose: false,
+    signtoolname: 'signtool',
+    signtoolcommand: '"path/to/signtool.exe" sign /f "C:\\absolute\\path\\to\\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
+}).then(callback).catch(callback);
+```
+
+Or async
+```javascript
+try {
+	await require("innosetup-compiler")("path/to/your/innoscript.iss", {
+	    gui: false,
+	    verbose: false,
+	    signtoolname: 'signtool',
+	    signtoolcommand: '"path/to/signtool.exe" sign /f "C:\\absolute\\path\\to\\mycertificate.pfx" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p "MY_PASSWORD" $f'
+	});
+} catch(error) {
+	console.log(error);
+}
+```
+
 ##### Grunt
 
 ```shell
